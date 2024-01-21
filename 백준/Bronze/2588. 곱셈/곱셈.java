@@ -1,30 +1,18 @@
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-    
-        int a, b;
+    public static void main(String[] args)throws IOException{
+       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        a = sc.nextInt();
-        b = sc.nextInt();
+        String a = br.readLine();
+        String b = br.readLine();
 
-        while(a > 999 || b > 999){
-            System.out.println("a, b는 3자리 이하여야합니다.");
-
-            a = sc.nextInt();
-            b = sc.nextInt();
-
-        }
-
-        System.out.println(a*(b%10));
-        System.lineSeparator();
-        System.out.println(a*(b%100/10));
-        System.lineSeparator();
-        System.out.println(a*(b/100));
-        System.lineSeparator();
-        System.out.println(a*b);
-
-        sc.close();
+        System.out.println(Integer.parseInt(a) * (b.charAt(2) - 48));
+        System.out.println(Integer.parseInt(a) * (b.charAt(1)- 48));
+        System.out.println(Integer.parseInt(a) * (b.charAt(0)- 48));
+        System.out.println(Integer.parseInt(a) * Integer.parseInt(b));
+        
     }
 }
