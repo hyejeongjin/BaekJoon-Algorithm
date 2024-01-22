@@ -1,13 +1,15 @@
-import java.util.*;
-
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 public class Main{
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int a, b;
-
-        a = sc.nextInt();
-        b = sc.nextInt();
+        //한 줄에 공백 차이로 받으면 에러가 난다.
+        String[] num = br.readLine().split(" ");
+        int a = Integer.parseInt(num[0]);
+        int b = Integer.parseInt(num[1]);
+        
 
         if(a > b){
             System.out.println(">");
@@ -17,6 +19,5 @@ public class Main{
         }else{
             System.out.println("==");
         }
-    sc.close();
     }
 }
