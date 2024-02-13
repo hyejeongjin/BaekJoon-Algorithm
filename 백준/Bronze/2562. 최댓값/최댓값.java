@@ -1,15 +1,20 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args)throws IOException{
        
-        Scanner sc = new Scanner(System.in);
+       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int[] num = new int[9];
         int max = -1000000;
 
         for(int i=0;i<9; i++){
-            num[i] = sc.nextInt();
+            
+            StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+            num[i] = Integer.parseInt(st.nextToken());
         }
         
         for(int i=0; i<9; i++){
@@ -24,7 +29,7 @@ public class Main{
             }
         }
 
-        sc.close();
+        br.close();
 
     }
 }
