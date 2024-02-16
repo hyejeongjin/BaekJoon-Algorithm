@@ -7,15 +7,15 @@ public class Main{
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     
-        int[] student = new int[30];
+        int[] student = new int[31];
 
-        for(int i=0; i<28; i++){
+        for(int i=1; i<29; i++){
             int num = Integer.parseInt(br.readLine());
-            student[num-1] = 1;
+            student[num] = 1;
         }
-        for(int j=0; j<student.length; j++){
+        for(int j=1; j<student.length; j++){
             if(student[j] != 1){
-                System.out.println(j+1);
+                System.out.println(j);
             }
         }
         br.close();
