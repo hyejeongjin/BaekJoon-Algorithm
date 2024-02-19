@@ -1,12 +1,15 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main{
-    public static void main(String[] args){
+    public static void main(String[] args)throws IOException{
 
-        Scanner sc = new Scanner(System.in);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         //시험 본 과목의 개수
-        int N = sc.nextInt();
+        int N = Integer.parseInt(br.readLine());
 
         int[] test = new int[N];
 
@@ -14,9 +17,10 @@ public class Main{
 
         //최댓값
         int max = -1000;
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
         for(int i=0; i<test.length; i++){
-            test[i] = sc.nextInt();
+            test[i] = Integer.parseInt(st.nextToken());
 
             max = Math.max(max, test[i]); 
         }
@@ -25,6 +29,6 @@ public class Main{
         }
         System.out.println((total/max*100)/N);
          
-        sc.close();
+        br.close();
     }
 }
