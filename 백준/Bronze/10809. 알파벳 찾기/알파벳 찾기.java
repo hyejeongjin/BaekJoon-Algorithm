@@ -9,7 +9,7 @@ public class Main{
         
         for(int i=97; i<123; i++){
             System.out.printf("%d", S.indexOf(i));
-            if(i != 122){
+            if(i != 123){
                 System.out.print(" ");
             }
         }
