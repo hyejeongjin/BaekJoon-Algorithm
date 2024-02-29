@@ -1,11 +1,14 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    String word = sc.next();
+    String word = br.readLine();
     int sum = 0;
 
     for(int i=0; i<word.length(); i++){
@@ -44,6 +47,6 @@ public static void main(String[] args){
         }
     }
     System.out.println(sum);
-    sc.close();
+    br.close();
     }
 }
