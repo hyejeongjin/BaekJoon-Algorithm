@@ -1,11 +1,13 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    String input = sc.next();
+    String input = br.readLine();
     int right = 1;
 
     for(int i=0; i<input.length()/2; i++){
@@ -14,6 +16,6 @@ public static void main(String[] args){
         }
     }
     System.out.println(right);
-    sc.close();
+    br.close();
     }
 }
