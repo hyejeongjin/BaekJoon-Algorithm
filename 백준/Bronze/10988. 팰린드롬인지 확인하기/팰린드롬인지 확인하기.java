@@ -8,13 +8,14 @@ public static void main(String[] args)throws IOException{
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     String input = br.readLine();
-    int right = 1;
+    StringBuilder sb = new StringBuilder(input);
+    String diff = sb.reverse().toString();
+    int right = 0;
 
-    for(int i=0; i<input.length()/2; i++){
-        if(input.charAt(i) != input.charAt(input.length()-i-1)){
-            right = 0;
-        }
+    if(input.equals(diff)){
+        right = 1;
     }
+
     System.out.println(right);
     br.close();
     }
