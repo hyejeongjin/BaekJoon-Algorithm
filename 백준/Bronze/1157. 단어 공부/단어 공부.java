@@ -1,12 +1,14 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int[] alpha = new int[26];
 
-    String input = sc.next().toUpperCase();
+    String input = br.readLine().toUpperCase();
 
     for(int i=0; i<input.length(); i++){
         int num = input.charAt(i) - 65;
@@ -25,6 +27,6 @@ public static void main(String[] args){
         }
     }
     System.out.println(ans);
-    sc.close();
+    br.close();
     }
 }
