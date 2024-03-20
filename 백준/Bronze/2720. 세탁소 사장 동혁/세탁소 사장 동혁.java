@@ -1,16 +1,18 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    int T = sc.nextInt();
+    int T = Integer.parseInt(br.readLine());
     int C = 0;
     int q=0, d=0, n=0, p=0;
 
     for(int i=0; i<T; i++){
-        C = sc.nextInt();
+        C = Integer.parseInt(br.readLine());
 
         q = C/25;
         C = C%25;
@@ -27,6 +29,6 @@ public static void main(String[] args){
         System.out.println(q + " " + d + " " + n + " " + p);
     }
 
-    sc.close();
+    br.close();
     }
 }
