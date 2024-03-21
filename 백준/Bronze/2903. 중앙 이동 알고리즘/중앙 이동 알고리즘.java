@@ -13,7 +13,7 @@ public static void main(String[] args)throws IOException{
     for(int i=0; i<N; i++){
         d = (d+(d-1));
     }
-    System.out.println(d*d);
+    System.out.println((int)Math.pow(d, 2));
     br.close();
     }
 }
