@@ -1,11 +1,13 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    int N = sc.nextInt();
+    int N = Integer.parseInt(br.readLine());
     
     int room = 1;
     int inc = 2;
@@ -19,6 +21,6 @@ public static void main(String[] args){
         }
         System.out.println(room);
     }
-    sc.close();
+    br.close();
     }
 }
