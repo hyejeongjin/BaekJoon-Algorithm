@@ -22,14 +22,15 @@ public static void main(String[] args)throws IOException{
                 num.add(i);
             }
         }
-        for(int i = 0; i<num.size()-1; i++){
+        num.remove(num.size()-1);
+        for(int i = 0; i<num.size(); i++){
             sum += num.get(i);
         }
         if(sum == n){
             System.out.print(sum + " = ");
             for(int j=0; j<num.size(); j++){
                 System.out.print(num.get(j));
-                if(j == num.size()-2){
+                if(j == num.size()-1){
                     System.out.println();
                     break;
                 }
