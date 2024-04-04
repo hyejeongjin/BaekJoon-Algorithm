@@ -1,14 +1,16 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     while(true){
-        int n = sc.nextInt();
+        int n = Integer.parseInt(br.readLine());
         List<Integer> num = new ArrayList<Integer>();
         int sum = 0;
 
@@ -25,7 +27,7 @@ public static void main(String[] args){
         }
         if(sum == n){
             System.out.print(sum + " = ");
-            for(int j=0; j<num.size()-1; j++){
+            for(int j=0; j<num.size(); j++){
                 System.out.print(num.get(j));
                 if(j == num.size()-2){
                     System.out.println();
