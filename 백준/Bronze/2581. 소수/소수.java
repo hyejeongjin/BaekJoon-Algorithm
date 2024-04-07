@@ -13,7 +13,7 @@ public static void main(String[] args){
 
     for(int i=M; i<=N; i++){
         num[i] += i;
-        for(int j=2; j<=N; j++){
+        for(int j=2; j<=N+2; j++){
             if(j == num[i]){
                 sosu[j] += j;
                 min = Math.min(sosu[j], min);
