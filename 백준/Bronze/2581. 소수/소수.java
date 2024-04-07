@@ -1,11 +1,15 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
-    int M = sc.nextInt();
-    int N = sc.nextInt();
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+    int M = Integer.parseInt(br.readLine());
+    int N = Integer.parseInt(br.readLine());
+
     int[] num = new int[N+1];
     int[] sosu = new int[N+1];
     int sum = 0;
@@ -13,7 +17,7 @@ public static void main(String[] args){
 
     for(int i=M; i<=N; i++){
         num[i] += i;
-        for(int j=2; j<=N+2; j++){
+        for(int j=2; j<=N; j++){
             if(j == num[i]){
                 sosu[j] += j;
                 min = Math.min(sosu[j], min);
@@ -30,6 +34,6 @@ public static void main(String[] args){
         System.out.println(sum);
         System.out.println(min);
     }
-    sc.close();
+    br.close();
     }
 }
