@@ -1,12 +1,19 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
-    int[] a = {sc.nextInt(), sc.nextInt()};
-    int[] b = {sc.nextInt(), sc.nextInt()};
-    int[] c = {sc.nextInt(), sc.nextInt()};
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st;
+    st = new StringTokenizer(br.readLine(), " ");
+    int[] a = {Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
+    st = new StringTokenizer(br.readLine(), " ");
+    int[] b = {Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
+    st = new StringTokenizer(br.readLine(), " ");
+    int[] c = {Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
     int x = 0;
     int y = 0;
    
@@ -28,6 +35,6 @@ public static void main(String[] args){
         y = a[1];
     }
     System.out.println(x + " " + y);
-    sc.close();
+    br.close();
     }
 }
