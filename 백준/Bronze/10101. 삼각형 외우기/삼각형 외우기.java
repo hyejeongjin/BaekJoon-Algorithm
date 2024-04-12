@@ -1,13 +1,15 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
     
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-    int a = sc.nextInt();
-    int b = sc.nextInt();
-    int c = sc.nextInt();
+    int a = Integer.parseInt(br.readLine());
+    int b = Integer.parseInt(br.readLine());
+    int c = Integer.parseInt(br.readLine());
 
     if(a == 60 && b == 60 && c == 60){
         System.out.println("Equilateral");
@@ -21,6 +23,6 @@ public static void main(String[] args){
     }else{
         System.out.println("Error");
     }
-    sc.close();
+    br.close();
     }
 }
