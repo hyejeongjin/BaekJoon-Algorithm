@@ -1,12 +1,14 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
 
-    Scanner sc = new Scanner(System.in);
-    long n = sc.nextInt();
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    long n = Long.parseLong(br.readLine());
 
     System.out.println(4*n);
-    sc.close();
+    br.close();
     }
 }
