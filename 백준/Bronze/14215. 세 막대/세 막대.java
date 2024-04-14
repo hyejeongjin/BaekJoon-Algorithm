@@ -1,15 +1,20 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
     
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     int[] a = new int[3];
     int sum = 0;
 
-    a[0] = sc.nextInt();
-    a[1] = sc.nextInt();
-    a[2] = sc.nextInt();
+    StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+
+    a[0] = Integer.parseInt(st.nextToken());
+    a[1] = Integer.parseInt(st.nextToken());
+    a[2] = Integer.parseInt(st.nextToken());
 
     if(a[0] >= a[1]+a[2]){
         a[0] = a[1]+a[2]-1;
@@ -22,6 +27,6 @@ public static void main(String[] args){
     }
     sum = a[0]+a[1]+a[2];
     System.out.println(sum);
-    sc.close();
+    br.close();
     }
 }
