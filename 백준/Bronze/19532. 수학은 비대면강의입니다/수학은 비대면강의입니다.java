@@ -1,16 +1,21 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class Main{
-public static void main(String[] args){
+public static void main(String[] args)throws IOException{
     
-    Scanner sc = new Scanner(System.in);
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    StringTokenizer st = new StringTokenizer(br.readLine(), " ");
     
-    int a = sc.nextInt();
-    int b = sc.nextInt();
-    int c = sc.nextInt();
-    int d = sc.nextInt();
-    int e = sc.nextInt();
-    int f = sc.nextInt();
+    int a = Integer.parseInt(st.nextToken());
+    int b = Integer.parseInt(st.nextToken());
+    int c = Integer.parseInt(st.nextToken());
+    int d = Integer.parseInt(st.nextToken());
+    int e = Integer.parseInt(st.nextToken());
+    int f = Integer.parseInt(st.nextToken());
     
     for(int x=-999; x<=1000; x++){
         for(int y=-999; y<=1000; y++){
@@ -21,6 +26,6 @@ public static void main(String[] args){
             }
         }
     }
-    sc.close();
+    br.close();
     }
 }
