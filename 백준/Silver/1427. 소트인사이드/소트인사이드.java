@@ -1,11 +1,12 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Scanner;
-
 public class Main{
-public static void main(String[] args){
-    Scanner sc = new Scanner(System.in);
-    char[] arr = sc.next().toCharArray();
+public static void main(String[] args)throws IOException{
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    char[] arr = br.readLine().toCharArray();
     String[] list = new String[arr.length];
 
     for(int i=0; i<arr.length; i++){
@@ -15,6 +16,6 @@ public static void main(String[] args){
     for(int i=0; i<arr.length; i++){
         System.out.print(list[i]);
     }
-    sc.close();
+    br.close();
     }
 }
