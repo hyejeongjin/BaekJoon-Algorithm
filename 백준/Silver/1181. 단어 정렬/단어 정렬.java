@@ -3,8 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Main{
@@ -19,12 +19,16 @@ public static void main(String[] args)throws IOException{
     //1.단어 중복 제거
     list = list.stream().distinct().collect(Collectors.toList());
     String[] arr = list.toArray(new String[list.size()]);  
-    //2.사전순으로 정렬
-    Arrays.sort(arr);   
-    //3.길이 비교
-    for(int i=0; i<arr.length; i++){
-        Arrays.sort(arr, (String s1, String s2) -> s1.length() - s2.length());      
-    }
+    Arrays.sort(arr, new Comparator<String>() {
+        @Override
+        public int compare(String s1, String s2){
+            if(s1.length() == s2.length()) {
+                return s1.compareTo(s2);
+            }else{
+                return s1.length() - s2.length();
+            }
+        }    
+    });
     for(int i=0; i<arr.length; i++){
         System.out.println(arr[i]);
     }
