@@ -25,13 +25,9 @@ public static void main(String[] args)throws IOException{
             map.remove(name);
         }else{
             map.put(name, sit);
-
         }
     }
     ArrayList<String> list = new ArrayList<String>(map.keySet());
-    /* for(String name : map.keySet()){
-        list.add(name);
-    } */
     Collections.sort(list, Collections.reverseOrder());
     for(int i=0; i<list.size(); i++){
        bw.write(list.get(i) + "\n");
